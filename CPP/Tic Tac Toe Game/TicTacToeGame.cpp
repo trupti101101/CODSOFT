@@ -100,6 +100,16 @@ int main() {
         playGame();
         cout << "Do you want to play again? (y/n): ";
         cin >> playAgain;
+        if (playAgain != 'y' && playAgain != 'Y' && playAgain != 'n' && playAgain != 'N') {
+            cout << "Invalid input. Exiting game.\n";
+            return 0;
+        }
     } while (playAgain == 'y' || playAgain == 'Y');
+
+    if (playAgain == 'n' || playAgain == 'N') {
+        cout << "Thank you for playing the Tic Tac Toe game.\n";
+    }
+
     return 0;
 }
+
